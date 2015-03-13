@@ -107,10 +107,6 @@ class ESDCommand(toolkit.CkanCommand):
                         ckan_dict[ckan_key] = None
                     else:
                         ckan_dict[ckan_key] = row[esd_key]
-                        try:
-                            ckan_dict[ckan_key] = int(ckan_dict[ckan_key])
-                        except ValueError:
-                            pass
                 ckan_dict['uri'] = 'http://id.esd.org.uk/{0}/{1}'.format(
                     object_type, ckan_dict['esd_id'])
                 ckan_dicts.append(ckan_dict)

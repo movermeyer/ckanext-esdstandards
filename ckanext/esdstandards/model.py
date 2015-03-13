@@ -84,11 +84,11 @@ def define_esd_tables():
                                Column('id', types.UnicodeText,
                                       primary_key=True,
                                       default=_make_uuid),
-                               Column('esd_id', types.Numeric, nullable=False),
+                               Column('esd_id', types.UnicodeText, nullable=False),
                                Column('title', types.UnicodeText),
                                Column('description', types.UnicodeText),
                                Column('uri', types.UnicodeText),
-                               Column('parent', types.Numeric))
+                               Column('parent', types.UnicodeText))
 
     mapper(ESDFunction, esd_function_table)
 
@@ -96,7 +96,7 @@ def define_esd_tables():
                               Column('id', types.UnicodeText,
                                      primary_key=True,
                                      default=_make_uuid),
-                              Column('esd_id', types.Numeric, nullable=False),
+                              Column('esd_id', types.UnicodeText, nullable=False),
                               Column('title', types.UnicodeText),
                               Column('description', types.UnicodeText),
                               Column('uri', types.UnicodeText))
