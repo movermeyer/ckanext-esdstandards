@@ -13,7 +13,11 @@ def _get_titles(value, obj_type):
     if not value:
         return None
 
-    ids = value.split(' ')
+    if ',' in value:
+        ids = value.split(',')
+    else:
+        ids = value.split(' ')
+
     titles = []
     for id in ids:
         try:
