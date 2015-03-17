@@ -1,1 +1,2 @@
 recursive-include ckanext-esdstandards-data *
+recursive-include ckanext/esdstandards *.html *.json *.js *.less *.css *.config
