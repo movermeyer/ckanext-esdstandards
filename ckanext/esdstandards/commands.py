@@ -63,7 +63,7 @@ class ESDCommand(toolkit.CkanCommand):
         db_setup()
 
         csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                                '..', '..', 'data')
+                                '..', '..', 'ckanext-esdstandards-data')
         csv_functions = os.path.join(csv_path, 'functions.csv')
         csv_services = os.path.join(csv_path, 'services.csv')
 

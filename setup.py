@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.0.1'
+version = '0.0.3'
 
 setup(
     name='ckanext-esdstandards',
@@ -21,6 +21,9 @@ setup(
     zip_safe=False,
     install_requires=[
         # -*- Extra requirements: -*-
+    ],
+    data_files=[
+        ('ckanext-esdstandards-data', ['ckanext-esdstandards-data/functions.csv', 'ckanext-esdstandards-data/services.csv']),
     ],
     entry_points='''
         [ckan.plugins]
