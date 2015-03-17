@@ -24,7 +24,7 @@
 ckanext-esdstandards
 ====================
 
-Helpers for working with LGA's ESD standards on CKAN.
+Helpers for working with LGA's `ESD standards`_ on CKAN.
 
 This extension contains:
 
@@ -38,6 +38,8 @@ This extension contains:
 
 
 For more details, see `Integrating it on your own extension`_
+
+.. _ESD standards: http://standards.esd.org.uk
 
 ------------
 Installation
