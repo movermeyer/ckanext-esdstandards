@@ -56,7 +56,7 @@ class ESDCommand(toolkit.CkanCommand):
 
         log.info('DB tables created')
 
-    def load(self):
+    def load(self, assume_yes=False):
 
         from ckanext.esdstandards.model import (esd_function_table,
                                                 esd_service_table)
@@ -80,18 +80,19 @@ class ESDCommand(toolkit.CkanCommand):
         }
 
         self._load('function', csv_functions, mapping_functions,
-                   esd_function_table)
+                   esd_function_table, assume_yes)
         self._load('service', csv_services, mapping_services,
-                   esd_service_table)
+                   esd_service_table, assume_yes)
 
-    def _load(self, object_type, csv_file, mapping, table):
+    def _load(self, object_type, csv_file, mapping, table, assume_yes=False):
 
         if model.Session.execute(table.count()).scalar():
             msg = 'Table {0} already contains records, '.format(table.name) + \
                   'do you want to recreate them?'
-            confirm = query_yes_no(msg, default='yes')
-            if confirm == "no":
-                return
+            if not assume_yes:
+                confirm = query_yes_no(msg, default='yes')
+                if confirm == "no":
+                    return
             model.Session.execute(table.delete())
 
         log = self._get_logger()

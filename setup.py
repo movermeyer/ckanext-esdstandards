@@ -24,8 +24,9 @@ setup(
     ],
     entry_points='''
         [ckan.plugins]
-        # Add plugins here, e.g.
         esd=ckanext.esdstandards.plugin:ESDStandardsPlugin
+        [ckan.test_plugins]
+        esd_test_plugin=ckanext.esdstandards.tests.mockplugin.plugin:TestESDPlugin
         [paste.paster_command]
         esd = ckanext.esdstandards.commands:ESDCommand
     ''',

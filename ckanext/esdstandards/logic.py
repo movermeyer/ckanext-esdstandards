@@ -42,7 +42,7 @@ def esd_service_autocomplete(context, data_dict):
 def _find(context, data_dict, esd_class):
     model = context['model']
 
-    id = toolkit.get_or_bust(data_dict, 'id')
+    id = unicode(toolkit.get_or_bust(data_dict, 'id'))
 
     result = model.Session.query(esd_class) \
                           .filter(or_(esd_class.esd_id==id,

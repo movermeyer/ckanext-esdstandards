@@ -18,8 +18,15 @@ def _validate(obj_type, value, context):
         values = value.split(',')
     elif ' ' in value:
         values = value.split(' ')
+        if not values[0].startswith('http'):
+            try:
+                int(values[0])
+            except ValueError:
+                values = [value]
     else:
         values = [value]
+
+    values = [v.strip() for v in values]
 
     new_values = []
     for esd_uri in values:
