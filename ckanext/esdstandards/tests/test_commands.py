@@ -15,7 +15,7 @@ assert_raises = nose.tools.assert_raises
 def _num_rows_in_csv_files():
 
     csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                            '..', '..', '..', 'data')
+                            '..', '..', '..', 'ckanext-esdstandards-data')
     csv_functions = os.path.join(csv_path, 'functions.csv')
     csv_services = os.path.join(csv_path, 'services.csv')
     with open(csv_functions, 'r') as f:
