@@ -59,7 +59,12 @@ To install ckanext-esdstandards:
    config file (by default the config file is located at
    ``/etc/ckan/default/production.ini``).
 
-4. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu::
+4. Populate the DB tables, by running::
+
+    paster --plugin=ckanext-esdstandards esd initdb -c /etc/ckan/default/production.ini
+    paster --plugin=ckanext-esdstandards esd load -c /etc/ckan/default/production.ini
+
+5. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu::
 
      sudo service apache2 reload
 
