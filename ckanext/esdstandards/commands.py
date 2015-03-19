@@ -58,9 +58,10 @@ class ESDCommand(toolkit.CkanCommand):
 
     def load(self, assume_yes=False):
 
+        db_setup()
+
         from ckanext.esdstandards.model import (esd_function_table,
                                                 esd_service_table)
-        db_setup()
 
         csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                 '..', '..', 'ckanext-esdstandards-data')
