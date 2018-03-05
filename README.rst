@@ -8,15 +8,15 @@
 .. image:: https://coveralls.io/repos/okfn/ckanext-esdstandards/badge.png?branch=master
   :target: https://coveralls.io/r/okfn/ckanext-esdstandards?branch=master
 
-.. image:: https://pypip.in/version/ckanext-esdstandards/badge.svg
+.. image:: https://img.shields.io/pypi/v/ckanext-esdstandards.svg
     :target: https://pypi.python.org/pypi/ckanext-esdstandards/
     :alt: Latest Version
 
-.. image:: https://pypip.in/py_versions/ckanext-esdstandards/badge.svg
+.. image:: https://img.shields.io/pypi/pyversions/ckanext-esdstandards.svg
     :target: https://pypi.python.org/pypi/ckanext-esdstandards/
     :alt: Supported Python versions
 
-.. image:: https://pypip.in/license/ckanext-esdstandards/badge.svg
+.. image:: https://img.shields.io/pypi/l/ckanext-esdstandards.svg
     :target: https://pypi.python.org/pypi/ckanext-esdstandards/
     :alt: License
 
